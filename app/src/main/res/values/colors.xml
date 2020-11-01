@@ -6,4 +6,5 @@
     <color name="colorBotones">#1A51DD</color>
     <color name="colorBordes">#A11A51DD</color>
     <color name="colorTexto">#FCFDFD</color>
+    <color name="colorTransparente">#00FCFDFD</color>
 </resources>
