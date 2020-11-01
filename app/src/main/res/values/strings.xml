@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MarsView</string>
+    <string name="botoninicio">Ver Misiones</string>
+    <string name="titulomisiones">Misiones a Marte</string>
+    <string name="fechalanzamiento">Fecha de lanzamiento:</string>
+    <string name="fechaaterrizaje">Fecha de aterrizaje:</string>
+    <string name="estado">Estado:</string>
+    <string name="ultimafoto">Fecha de la última foto:</string>
+    <string name="totalfotos">Total de fotos tomadas:</string>
+    <string name="camaras">Cámaras:</string>
+    <string name="galeria">Ver galeria:</string>
+    <string name="titulogaleria">Galería</string>
+    <string name="id">ID:</string>
+    <string name="nombre">Nombre:</string>
 </resources>
