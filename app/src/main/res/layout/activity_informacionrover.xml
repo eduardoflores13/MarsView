@@ -30,6 +30,7 @@
         android:layout_marginBottom="36dp"
         android:background="@color/colorBotones"
         android:fontFamily="@font/quantico_bold"
+        android:onClick="verGaleria"
         android:text="@string/galeria"
         android:textAllCaps="false"
         android:textColor="@color/colorTexto"
@@ -46,6 +47,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/flecha"
+        android:onClick="irAtras"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/flecha" />

@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_default"
-    tools:context=".Listamisiones">
+    tools:context=".verlistamisiones">
 
 
     <TextView
         android:id="@+id/txvtitulomisiones"
-        android:layout_width="509dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="306dp"
+        android:layout_height="153dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/quantico_bold"
         android:text="@string/titulomisiones"
         android:textAlignment="center"
@@ -24,12 +24,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvmisiones"
-        android:layout_width="675dp"
-        android:layout_height="206dp"
-        android:layout_marginTop="35dp"
+        android:layout_width="404dp"
+        android:layout_height="417dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvtitulomisiones"
         app:layout_constraintVertical_bias="0.0" />
@@ -38,9 +38,10 @@
         android:id="@+id/btnatras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/flecha"
+        android:onClick="irAtras"
         android:src="@drawable/flecha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

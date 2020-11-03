@@ -5,41 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fondo_default"
-    tools:context=".Listamisiones">
+    tools:context=".verlistamisiones">
 
 
     <TextView
         android:id="@+id/txvtitulomisiones"
-        android:layout_width="767dp"
-        android:layout_height="351dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="112dp"
+        android:layout_width="622dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/quantico_bold"
         android:text="@string/titulomisiones"
         android:textAlignment="center"
         android:textColor="@color/colorTexto"
-        android:textSize="125sp"
+        android:textSize="55sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvmisiones"
-        android:layout_width="947dp"
-        android:layout_height="993dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="695dp"
+        android:layout_height="201dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvtitulomisiones"
-        app:layout_constraintVertical_bias="0.292" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/btnatras"
-        android:layout_width="72dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="56dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/flecha"
         android:src="@drawable/flecha"
         app:layout_constraintStart_toStartOf="parent"

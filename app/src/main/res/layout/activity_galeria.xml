@@ -6,7 +6,7 @@
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
                                                    android:background="@drawable/fondodefault"
-                                                   android:theme="@style/Theme.AppCompat.NoActionBar" tools:context=".MainActivity">
+                                                   android:theme="@style/Theme.AppCompat.NoActionBar" tools:context=".galeria">
 
     <ImageButton
         android:id="@+id/btnatras"
@@ -15,6 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/flecha"
+        android:onClick="irAtras"
         android:src="@drawable/flecha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
