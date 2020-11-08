@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.marsview.repo.RoverRepo
+import com.example.marsview.service.RoverService
+import com.example.marsview.service.RoverResponse
 import kotlinx.android.synthetic.main.activity_verlistamisiones.*
 
 class verlistamisiones : AppCompatActivity() {
@@ -15,11 +18,22 @@ class verlistamisiones : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_verlistamisiones)
 
+        val roverService = RoverService.instance
+        val roverRepo = RoverRepo(roverService)
+        val roverListAdapter = MisionesListaRecyclerViewAdapter()
+
+        roverRepo.listarRover {
+            if(it != null){
+                roverListAdapter.listMisiones = it
+                roverListAdapter.notifyDataSetChanged()
+            }
+        }
+
         rcvMisionesLista = rcvmisiones
 
         rcvMisionesLista.layoutManager = LinearLayoutManager(this)
 
-        rcvMisionesLista.adapter = MisionesListaRecyclerViewAdapter()
+        rcvMisionesLista.adapter = roverListAdapter
 
     }
 

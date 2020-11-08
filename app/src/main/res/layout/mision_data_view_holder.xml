@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        tools:text="NombreRover" />
+        tools:text="name" />
 
     <Button
         android:id="@+id/btnmision"
@@ -52,7 +52,7 @@
         tools:text="@string/fechalanzamiento" />
 
     <TextView
-        android:id="@+id/txvfechalanzamiento2"
+        android:id="@+id/txvfechallegada"
         android:layout_width="215dp"
         android:layout_height="21dp"
         android:layout_marginStart="28dp"
