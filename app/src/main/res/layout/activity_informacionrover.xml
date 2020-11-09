@@ -30,7 +30,6 @@
         android:layout_marginBottom="36dp"
         android:background="@color/colorBotones"
         android:fontFamily="@font/quantico_bold"
-        android:onClick="verGaleria"
         android:text="@string/galeria"
         android:textAllCaps="false"
         android:textColor="@color/colorTexto"
@@ -38,7 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rcvcamaras"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.587" />
 
     <ImageButton
         android:id="@+id/btnatras2"
@@ -54,10 +53,11 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvcamaras"
-        android:layout_width="230dp"
-        android:layout_height="50dp"
+        android:layout_width="243dp"
+        android:layout_height="99dp"
         android:layout_marginTop="388dp"
         android:layout_marginEnd="48dp"
+        android:textAlignment="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,8 +102,8 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="110dp"
-        android:layout_height="29dp"
+        android:layout_width="85dp"
+        android:layout_height="30dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="388dp"
         android:fontFamily="@font/quantico_bold"

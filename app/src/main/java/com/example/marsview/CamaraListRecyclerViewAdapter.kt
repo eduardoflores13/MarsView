@@ -3,9 +3,10 @@ package com.example.marsview
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.marsview.service.CameraResponse
 
 class CamaraListRecyclerViewAdapter : RecyclerView.Adapter<CamaraListViewHolder>() {
-    val listacamaras : List<String> = listOf<String>("Camara 1", "Camara 2", "Camara 3")
+    var listacamaras = listOf<CameraResponse.RoverRespuesta.CameraItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CamaraListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.camara_lista_view_holder,parent,false)
@@ -14,7 +15,7 @@ class CamaraListRecyclerViewAdapter : RecyclerView.Adapter<CamaraListViewHolder>
     }
 
     override fun onBindViewHolder(holder: CamaraListViewHolder, position: Int) {
-       holder.nombreCamara.text = listacamaras[position]
+       holder.nombreCamara.text = listacamaras[position].full_name
     }
 
     override fun getItemCount(): Int {

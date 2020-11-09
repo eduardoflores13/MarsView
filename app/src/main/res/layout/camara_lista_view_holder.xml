@@ -10,7 +10,7 @@
         android:id="@+id/txvcamara"
         android:layout_width="222dp"
         android:layout_height="25dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/quantico_bold"
         android:textAlignment="center"

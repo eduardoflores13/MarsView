@@ -4,11 +4,19 @@ import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Path
+
 
 interface RoverService {
+    //LLamado para obtener los rovers
     @GET("rovers?api_key=ECobQCnzj1PEvt7FM4JCGE0XjwLCJzUicyJVOdYc")
-
     fun listarRover(): Call<RoverResponse>
+
+
+    //LLamada para obtener las cámaras del rover
+
+    @GET("rovers/{rover}?api_key=ECobQCnzj1PEvt7FM4JCGE0XjwLCJzUicyJVOdYc")
+    fun listarcamaras(@Path("rover") rover:String):Call<CameraResponse>
 
     companion object{
         val instance: RoverService by lazy{

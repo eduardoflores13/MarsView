@@ -11,7 +11,7 @@ import com.example.marsview.service.RoverService
 import com.example.marsview.service.RoverResponse
 import kotlinx.android.synthetic.main.activity_verlistamisiones.*
 
-class verlistamisiones : AppCompatActivity() {
+class verlistamisiones : AppCompatActivity(), RoverSeleccionRecyclerViewClickListener {
     lateinit var rcvMisionesLista : RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,7 @@ class verlistamisiones : AppCompatActivity() {
 
         val roverService = RoverService.instance
         val roverRepo = RoverRepo(roverService)
-        val roverListAdapter = MisionesListaRecyclerViewAdapter()
+        val roverListAdapter = MisionesListaRecyclerViewAdapter(this)
 
         roverRepo.listarRover {
             if(it != null){
@@ -41,8 +41,24 @@ class verlistamisiones : AppCompatActivity() {
         onBackPressed()
     }
 
-    fun vermision(view: View){
-        val vermision = Intent(view.context, informacionrover::class.java)
+
+    fun vermision(rover:RoverResponse.RoverItem){
+        val vermision = Intent(this, informacionrover::class.java)
+        vermision.putExtra("NOMBREROVER", rover.name)
+        vermision.putExtra("LAUNCHDATE", rover.launch_date)
+        vermision.putExtra("LANDINGDATE", rover.landing_date)
+        vermision.putExtra("STATUS", rover.status)
+        vermision.putExtra("MAXDATE", rover.max_date)
+        vermision.putExtra("TOTALFOTOS", rover.total_photos.toString())
+
+
+
         startActivity(vermision)
     }
+
+    override fun listItemClicked(rover: RoverResponse.RoverItem) {
+        vermision(rover)
+    }
 }
+
+
