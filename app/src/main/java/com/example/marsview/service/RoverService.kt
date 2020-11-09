@@ -18,6 +18,9 @@ interface RoverService {
     @GET("rovers/{rover}?api_key=ECobQCnzj1PEvt7FM4JCGE0XjwLCJzUicyJVOdYc")
     fun listarcamaras(@Path("rover") rover:String):Call<CameraResponse>
 
+    @GET("rovers/{rover}/photos?sol=1000&api_key=ECobQCnzj1PEvt7FM4JCGE0XjwLCJzUicyJVOdYc")
+    fun listarfotos(@Path("rover")rover:String):Call<GaleriaResponse>
+
     companion object{
         val instance: RoverService by lazy{
             val retrofit = Retrofit.Builder()

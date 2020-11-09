@@ -9,7 +9,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imvfoto"
         android:layout_width="491dp" android:layout_height="312dp"
         app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444" app:layout_constraintStart_toStartOf="parent"

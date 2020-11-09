@@ -11,5 +11,5 @@
     <string name="galeria">Ver Galeria</string>
     <string name="titulogaleria">Galería</string>
     <string name="id">ID:</string>
-    <string name="nombre">Nombre:</string>
+    <string name="fechafoto">Fecha:</string>
 </resources>

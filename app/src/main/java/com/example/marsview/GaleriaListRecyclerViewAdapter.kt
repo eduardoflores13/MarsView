@@ -4,9 +4,19 @@ package com.example.marsview
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.marsview.service.GaleriaResponse
+import com.squareup.picasso.Picasso
 
-class GaleriaListRecyclerViewAdapter : RecyclerView.Adapter<GaleriaListViewHolder>() {
-    val listaGaleria : List<String> = listOf<String>("Imagen 1", "Imagen 2", "Imagen 3")
+interface FotoSeleccionRecyclerViewClickListener {
+    fun fotoItemClicked(foto: GaleriaResponse.GaleriaResponseItem)
+}
+
+
+
+class GaleriaListRecyclerViewAdapter(
+    val clickListener: FotoSeleccionRecyclerViewClickListener
+) : RecyclerView.Adapter<GaleriaListViewHolder>() {
+    var listaGaleria : List<GaleriaResponse.GaleriaResponseItem> = listOf<GaleriaResponse.GaleriaResponseItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GaleriaListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.galeria_data_view_holder,parent, false)
@@ -14,7 +24,14 @@ class GaleriaListRecyclerViewAdapter : RecyclerView.Adapter<GaleriaListViewHolde
     }
 
     override fun onBindViewHolder(holder: GaleriaListViewHolder, position: Int) {
-        holder.imagenRover.text = listaGaleria[position]
+        val ruta = listaGaleria[position].img_src?.replace("http://","https://")
+        Picasso.get().load("$ruta")
+            .into(holder.imagenRover)
+        holder.idfoto.text = listaGaleria[position].id.toString()
+        holder.fechafoto.text = listaGaleria[position].earth_date
+        holder.botonfoto.setOnClickListener {
+            clickListener.fotoItemClicked(listaGaleria[position])
+        }
     }
 
     override fun getItemCount(): Int {
