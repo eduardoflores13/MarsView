@@ -19,17 +19,22 @@ class MisionesListaRecyclerViewAdapter(val clickListener: RoverSeleccionRecycler
     }
 
     override fun onBindViewHolder(holder: ListaMisionesViewHolder, position: Int) {
-        holder.nombreRover.text = listMisiones[position].name.toString()
-        holder.fechaLanzamientoRover.text = listMisiones[position].launch_date.toString()
-        holder.fechaLlegadaRover.text = listMisiones[position].landing_date.toString()
+        holder.nombreRover.text = listMisiones[position].name
+        holder.fechaLanzamientoRover.text = fechaEspaniol(listMisiones[position].launch_date)
+        holder.fechaLlegadaRover.text = fechaEspaniol(listMisiones[position].landing_date)
         holder.botonMision.setOnClickListener{
             clickListener.listItemClicked(listMisiones[position])
         }
-
     }
 
     override fun getItemCount(): Int {
         return listMisiones.size
+    }
+
+    fun fechaEspaniol(fechaingles : String): String {
+        val listaFecha = fechaingles.split("-")
+        var fechaEspaniol = listaFecha[2] + "/" + listaFecha[1] + "/" + listaFecha[0]
+        return fechaEspaniol
     }
 
 

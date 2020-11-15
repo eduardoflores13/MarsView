@@ -15,14 +15,18 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/flecha"
-        android:onClick="irAtras"
         android:src="@drawable/flecha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imvfoto"
-        android:layout_width="405dp" android:layout_height="577dp"
-        android:layout_marginTop="20dp" app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/btnatras"
-        app:layout_constraintVertical_bias="0.364" app:srcCompat="@drawable/marte_fondo"/>
+        android:layout_width="413dp"
+        android:layout_height="574dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnatras"
+        app:layout_constraintVertical_bias="0.364"
+        app:srcCompat="@drawable/marte_fondo" />
 </androidx.constraintlayout.widget.ConstraintLayout>

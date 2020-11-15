@@ -34,11 +34,14 @@ class galeria : AppCompatActivity(), FotoSeleccionRecyclerViewClickListener {
         rcvGalerialist = rcvGaleria
         rcvGalerialist.layoutManager = LinearLayoutManager(this)
         rcvGalerialist.adapter = galerialistadapter
+
+
+        btnatras.setOnClickListener {
+            onBackPressed()
+        }
+
     }
 
-    fun irAtras(view: View) {
-        onBackPressed()
-    }
 
     fun verFoto(view: View){
         val foto = Intent(view.context, Imagen::class.java)

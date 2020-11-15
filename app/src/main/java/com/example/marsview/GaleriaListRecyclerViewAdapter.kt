@@ -25,10 +25,11 @@ class GaleriaListRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: GaleriaListViewHolder, position: Int) {
         val ruta = listaGaleria[position].img_src?.replace("http://","https://")
+        val fechaFoto = listaGaleria[position].earth_date
         Picasso.get().load("$ruta")
             .into(holder.imagenRover)
         holder.idfoto.text = listaGaleria[position].id.toString()
-        holder.fechafoto.text = listaGaleria[position].earth_date
+        holder.fechafoto.text = fechaEspaniol(fechaFoto)
         holder.botonfoto.setOnClickListener {
             clickListener.fotoItemClicked(listaGaleria[position])
         }
@@ -36,6 +37,12 @@ class GaleriaListRecyclerViewAdapter(
 
     override fun getItemCount(): Int {
         return listaGaleria.size
+    }
+
+    fun fechaEspaniol(fechaingles : String?): String {
+        val listaFecha = fechaingles?.split("-")
+        var fechaEspaniol = listaFecha?.get(2) + "/" + listaFecha?.get(1) + "/" + listaFecha?.get(0)
+        return fechaEspaniol
     }
 
 }

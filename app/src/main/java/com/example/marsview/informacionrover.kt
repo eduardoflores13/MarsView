@@ -22,13 +22,18 @@ class informacionrover : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_informacionrover)
 
-        //Asignar la información a las textviews
+        //Guardar los valores en variable para poder traducir las fechas
+        var fechaLanzamiento:String? = intent.getStringExtra("LAUNCHDATE")
+        var fechaAterrizaje:String? = intent.getStringExtra("LANDINGDATE")
+        var estado:String? = intent.getStringExtra("STATUS")
+        var ultimaFecha:String? = intent.getStringExtra("MAXDATE")
 
+        //Asignar la información a las textviews
         txvnombrerover.text = intent.getStringExtra("NOMBREROVER")!!
-        txvfechalanzamientodato.text = intent.getStringExtra("LAUNCHDATE")
-        txvfechaaterrizajedato.text = intent.getStringExtra("LANDINGDATE")
-        txvestado.text = intent.getStringExtra("STATUS")
-        txvfechaultimafoto.text = intent.getStringExtra("MAXDATE")
+        txvfechalanzamientodato.text = fechaEspaniol(fechaLanzamiento)
+        txvfechaaterrizajedato.text = fechaEspaniol(fechaAterrizaje)
+        txvestado.text = traducirEstado(estado)
+        txvfechaultimafoto.text = fechaEspaniol(ultimaFecha)
         txvtotalfotos.text = intent.getStringExtra("TOTALFOTOS")
 
         val rovername: String = intent.getStringExtra("NOMBREROVER").toString()
@@ -62,12 +67,25 @@ class informacionrover : AppCompatActivity() {
             galeria.putExtra("NOMBREROVER", rovername.toLowerCase())
             startActivity(galeria)
         }
+
+        btnatras2.setOnClickListener {
+            onBackPressed()
+        }
+
     }
 
+    fun fechaEspaniol(fechaingles : String?): String {
+        val listaFecha = fechaingles?.split("-")
+        var fechaEspaniol = listaFecha?.get(2) + "/" + listaFecha?.get(1) + "/" + listaFecha?.get(0)
+        return fechaEspaniol
+    }
 
-
-    fun irAtras(view: View) {
-        onBackPressed()
+    fun traducirEstado(estadoingles : String?): String {
+        if (estadoingles == "active"){
+            return "Activo"
+        }else{
+            return "Completado"
+        }
     }
 
 }

@@ -35,10 +35,12 @@ class verlistamisiones : AppCompatActivity(), RoverSeleccionRecyclerViewClickLis
 
         rcvMisionesLista.adapter = roverListAdapter
 
-    }
+        //Establecer el onclick listener para ir atrás
 
-    fun irAtras(view: View) {
-        onBackPressed()
+        btnatras.setOnClickListener {
+            onBackPressed()
+        }
+
     }
 
 
@@ -50,8 +52,6 @@ class verlistamisiones : AppCompatActivity(), RoverSeleccionRecyclerViewClickLis
         vermision.putExtra("STATUS", rover.status)
         vermision.putExtra("MAXDATE", rover.max_date)
         vermision.putExtra("TOTALFOTOS", rover.total_photos.toString())
-
-
 
         startActivity(vermision)
     }
