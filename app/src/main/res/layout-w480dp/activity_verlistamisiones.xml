@@ -10,10 +10,10 @@
 
     <TextView
         android:id="@+id/txvtitulomisiones"
-        android:layout_width="385dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="352dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="48dp"
         android:fontFamily="@font/quantico_bold"
         android:text="@string/titulomisiones"
         android:textAlignment="center"
@@ -24,15 +24,15 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvmisiones"
-        android:layout_width="647dp"
-        android:layout_height="226dp"
+        android:layout_width="463dp"
+        android:layout_height="165dp"
         android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.63"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvtitulomisiones"
-        app:layout_constraintVertical_bias="0.226" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
         android:id="@+id/btnatras"

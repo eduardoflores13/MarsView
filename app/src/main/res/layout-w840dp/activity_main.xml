@@ -5,45 +5,34 @@
     android:theme="@style/Theme.AppCompat.NoActionBar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondoinicio"
+    android:background="@drawable/fondoinicio_hori"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="658dp"
-        android:layout_height="202dp"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="108dp"
-        android:fontFamily="@font/quantico_bold"
-        android:text="@string/app_name"
-        android:textColor="@color/colorBotones"
-        android:textSize="120sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="976dp"
-        android:layout_height="244dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="68dp"
-        android:fontFamily="@font/quantico_bold"
-        android:text="@string/app_name"
-        android:textColor="@color/colorTexto"
-        android:textSize="200sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
     <Button
         android:id="@+id/button"
-        android:layout_width="530dp"
-        android:layout_height="182dp"
-        android:layout_marginStart="372dp"
-        android:layout_marginTop="244dp"
+        android:layout_width="361dp"
+        android:layout_height="145dp"
         android:background="@color/colorBotones"
         android:fontFamily="@font/quantico_bold"
         android:text="@string/botoninicio"
         android:textAllCaps="false"
         android:textColor="@color/colorTexto"
-        android:textSize="75sp" app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="448dp"
+        android:layout_height="162dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/marsview" />
 </androidx.constraintlayout.widget.ConstraintLayout>

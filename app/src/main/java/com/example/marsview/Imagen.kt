@@ -15,10 +15,6 @@ class Imagen : AppCompatActivity() {
         val imagenvista = findViewById<ImageView>(R.id.imvfoto)
 
 
-        btnatras.setOnClickListener {
-            onBackPressed()
-        }
-
         Picasso.get().load("$path")
             .into(imagenvista)
 
