@@ -10,9 +10,8 @@
 
     <ImageView
         android:id="@+id/imvfoto"
-        android:layout_width="413dp"
-        android:layout_height="574dp"
+        android:layout_width="846dp"
+        android:layout_height="416dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/marte_fondo"/>
+        app:layout_constraintStart_toStartOf="parent" app:srcCompat="@drawable/marte_fondo"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
