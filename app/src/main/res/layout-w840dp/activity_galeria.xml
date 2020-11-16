@@ -6,7 +6,8 @@
                                                    android:layout_width="match_parent"
                                                    android:layout_height="match_parent"
                                                    android:background="@drawable/fondodefault"
-                                                   android:theme="@style/Theme.AppCompat.NoActionBar" tools:context=".MainActivity">
+                                                   android:theme="@style/Theme.AppCompat.NoActionBar"
+                                                   tools:context=".MainActivity">
 
     <ImageButton
         android:id="@+id/btnatras"
@@ -20,23 +21,23 @@
         app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/textViewg1"
-        android:layout_width="282dp"
-        android:layout_height="104dp"
+        android:layout_width="382dp"
+        android:layout_height="175dp"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="55dp"
         android:layout_marginEnd="70dp"
         android:fontFamily="@font/quantico_bold"
         android:text="@string/titulogaleria"
         android:textAlignment="center"
         android:textColor="@color/colorTexto"
-        android:textSize="65sp" app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="110sp" app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvGaleria"
-        android:layout_width="762dp"
-        android:layout_height="204dp"
+        android:layout_width="942dp"
+        android:layout_height="484dp"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="1dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"

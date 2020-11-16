@@ -33,8 +33,8 @@
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvGaleria"
-        android:layout_width="639dp"
-        android:layout_height="211dp"
+        android:layout_width="558dp"
+        android:layout_height="212dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="1dp"
