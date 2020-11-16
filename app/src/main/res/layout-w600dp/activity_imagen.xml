@@ -7,16 +7,6 @@
                                                    android:background="@drawable/fondo_default"
                                                    tools:context=".Imagen">
 
-    <ImageButton
-        android:id="@+id/btnatras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/flecha"
-        android:src="@drawable/flecha"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
     <ImageView
         android:id="@+id/imvfoto"
         android:layout_width="612dp" android:layout_height="404dp"
